@@ -9,26 +9,19 @@
         <h1 class="display-1 text-center">Login</h1>
         <p class="text-center lead">Faça Login da sua conta</p>
 
+        <%- include('includes/messages') %>
+
         <div class="row">
           <form action="/login/login">
-            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
-
             <div class="col-lg">
               <h4>Faça seu Login</h4>
-               <%- include('includes/register') %>
+               <%- include('includes/formRegis') %>
+              <button type="submit" class="btn btn-primary">Logar</button>
+               <p>Não possui conta?</p>
+               <a href="./register">Registre-se</a>
             </div>
 
           </form>
-
-          <form action="/login/register">
-          <input type="hidden" name="_csrf" value=<%= csrfToken %>>
-
-            <div class="col-lg">
-             <h4>Faça seu cadastro</h4>
-             <%- include('includes/register') %>
-           </div>
-          </form>
-        </div>
 
 
       </div>
