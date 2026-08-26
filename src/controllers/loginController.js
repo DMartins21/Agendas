@@ -23,9 +23,8 @@ exports.userRegister = async(req, res) => {
         }
         req.flash('sucess', 'Seu Usuário foi registrado com sucesso!')
         req.save(function(){
-            return redirect('/login/')
+            return res.redirect('/login/')
         })
-        res.send(login)
     }catch(e){
         console.log(e)
         res.render('404')
