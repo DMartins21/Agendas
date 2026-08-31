@@ -1,0 +1,21 @@
+<form>
+ <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+  <div class="form-group">
+    <label for="nomeContato">Nome</label>
+    <input value="<%= contato.nome %>" type="text" class="form-control" id="nomeDoContato" placeholder="Defina o nome do Contato" name="nome">
+  </div>
+  
+  <div class="form-group">
+    <label for="sobrenomeContato">Sobrenome</label>
+    <input value="<%= contato.sobrenome %>" type="text" class="form-control" id="sobrenomeDoContato" placeholder="Defina o sobrenome do Contato" name="sobrenome">
+  </div>
+  
+  <div class="form-group">
+    <label for="numeroContato">Número</label>
+    <input value="<%= contato.telefone %>" type="text" class="form-control" id="numeroContato" placeholder="Número do seu contato" name="telefone">
+  </div>
+  <div>
+    <label for="exampleInputEmail1">Email do Contato</label>
+    <input value="<%= contato.email %>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email do seu contato" name="email">
+  </div>
+</form>

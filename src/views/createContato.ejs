@@ -1,0 +1,31 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8 my-5">
+        <h1 class="display-3 text-center">Novo Contato</h1>
+        <p class="text-center lead">Registre seu novo contato na agenda</p>
+
+        <%- include('includes/messages') %>
+
+        <div class="row">
+
+          <form action="/contato/create" method="POST">
+            <div class="col-lg">
+             <h4>Cadastre um novo Contato</h4>
+             <%- include('includes/formRegisContato') %>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+           </div>
+          </form>
+        </div>
+
+
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+
+<%- include('includes/footer') %>
