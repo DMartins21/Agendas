@@ -10,18 +10,23 @@
         <p class="text-center lead">Seus contatos estão abaixo:</p>
 
         <%- include('includes/messages') %>
-
+        <% if(contatosList.length === 0) { %>
+          <p class="text-center lead">Nenhum contato encontrado.</p>
+        <% } else {%>
         <div class="responsive-table">
           <table class="table">
-            <tr>
-              <td>Davi</td>
-              <td>Luiz</td>
-              <td>9402-1394</td>
-              <td>teste@gmail.com</td>
-            </tr>
+            <% contatosList.forEach(contato => { %>
+              <tr>
+                <td><%= contato.nome %></td>
+                <td><%= contato.email %></td>
+                <td><%= contato.telefone %></td>
+                <td><a href="/contato/<%= contato._id %>" class="btn btn-primary">Editar</a></td>
+                <td><a href="/contato/delete/<%= contato._id %>" class="btn btn-danger">Excluir</a></td>
+              </tr>
+            <% }) %>
           </table>
         </div>
-
+        <% } %>
       </div>
       <div class="col-lg-2"></div>
     </div>

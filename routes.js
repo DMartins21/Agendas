@@ -19,6 +19,8 @@ route.post('/login/login', loginController.login)
 route.get('/contato/', loginRequired, contatoController.index)
 route.get('/contato/create', loginRequired, contatoController.create)
 route.get('/contato/:id', loginRequired, contatoController.editIndex)
+route.get('/contato/delete/:id', loginRequired, contatoController.deleteContato)
+route.post('/contato/edit/:id', loginRequired, contatoController.edit)
 route.post('/contato/create', loginRequired, contatoController.createContato)
 
 

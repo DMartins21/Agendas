@@ -12,8 +12,11 @@
         <%- include('includes/messages') %>
 
         <div class="row">
-
+          <% if(contato._id) { %>}
+          <form action="/contato/edit/<%= contato._id %>" method="POST">
+            <% } else { %>
           <form action="/contato/create" method="POST">
+            <% } %>
             <div class="col-lg">
              <h4>Cadastre um novo Contato</h4>
              <%- include('includes/formRegisContato') %>
